@@ -4,24 +4,30 @@ public class RotateArray
 {
     public static void main(String[] args)
     {
-        Scanner sc = new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
         System.out.println("Enter n:");
-        int n = sc.nextInt();
+        int n = s.nextInt();
+        System.out.println("Enter d:");
+        int d = s.nextInt();
+        System.out.println("Enter elements:");
         int[] a = new int[n];
-        System.out.println("Enter array elements:");
         for (int i=0;i<n;i++)
-            a[i]= sc.nextInt();
-        System.out.println("Enter m:");
-        int h = sc.nextInt();
-        rotateArr(a,h,n);
+            a[i]=s.nextInt();
+        rotateArr(a,d,n);
     }
-    public static void rotateArr(int arr[], int d, int n)
+    public static void rotateArr(int[] arr, int d, int n)
     {
+        if (d>=n)
+        {
+            while (n<=d)
+            {
+                d=d-n;
+            }
+        }
         int[] temp = new int[n];
         java.util.Arrays.fill(temp,0);
         int i=d;
         int j=0;
-
         while (i != n)
         {
             temp[j]=arr[i];
