@@ -8,17 +8,17 @@ public class IdenticalLinkedList
         int t = sc.nextInt();
         while (t --> 0)
         {
-            Node head1=null,head2=null,tail1= null,tail2=null;
+            Node1 head1=null,head2=null,tail1= null,tail2=null;
 
             //input first LL
             int n1 = sc.nextInt();
             int d1 = sc.nextInt();
-            head1 = new Node(d1);
+            head1 = new Node1(d1);
             tail1 = head1;
 
             while (n1 --> 1)
             {
-                Node n = new Node(sc.nextInt());
+                Node1 n = new Node1(sc.nextInt());
                 tail1.next=n;
                 tail1=tail1.next;
             }
@@ -26,12 +26,12 @@ public class IdenticalLinkedList
             //input second LL
             int n2 = sc.nextInt();
             int d2 = sc.nextInt();
-            head2 = new Node(d2);
+            head2 = new Node1(d2);
             tail2 = head2;
 
             while (n2 --> 1)
             {
-                Node n = new Node(sc.nextInt());
+                Node1 n = new Node1(sc.nextInt());
                 tail2.next=n;
                 tail2=tail2.next;
             }
@@ -46,7 +46,7 @@ public class IdenticalLinkedList
     {
         System.out.println(o);
     }
-    public static void show(Node head)
+    public static void show(Node1 head)
     {
         while (head != null)
         {
@@ -59,7 +59,7 @@ public class IdenticalLinkedList
 class Node
 {
     int data;
-    Node next;
+    Node1 next;
     public Node(int data)
     {
         this.data = data;
@@ -69,7 +69,7 @@ class Node
 class Solution
 {
     // Function to check whether two linked lists are identical or not.
-    public boolean areIdentical(Node head1, Node head2)
+    public boolean areIdentical(Node1 head1, Node1 head2)
     {
         if (head1 == null || head2 == null) {
             return false; // Lists are not identical if one is null
